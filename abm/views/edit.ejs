@@ -6,47 +6,46 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="/products/create" method="POST">
+    <form action="/products/edit/<%= product.id %>" method="POST">
        
         <div class="formulario">
-            
             <label for="nombre">nombre</label>
-            <input type="text" name="nombre" >
+            <input type="text" name="nombre" value="<%= product.nombre %>" >
 
         </div>
         <br>
+
         <div class="formulario">
             <label for="precio">precio</label>
-            <input type="text" name="precio" >
+            <input type="text" name="precio" value="<%= product.precio %>" >
         </div>
         <br>
+
         <div class="formulario">
             <label for="descripcion">descripcion</label>
-            <input type="text" name="descripcion" >
+            <input type="text" name="descripcion" value="<%= product.descripcion %>" >
             
         </div>
         <br>
+
         <div class="formulario">
             <label for="marca">marca</label>
-            <input type="text" name="marca" >
+            <input type="text" name="marca" value="<%= product.marca %>" >
             
         </div>
         <br>
+
         <div class="formulario">
             <label for="stock">stock</label>
-            <input type="text" name="stock" >
+            <input type="text" name="stock" value="<%= product.stock %>" >
             
         </div>
 
-        <button type="submit"> enviar </button>
+        <button type="submit"> editar </button>
 
-        
-
-        
-
-        
-
-        
+    </form>
+    <form action="/products/delete/<%= product.id %>" method="POST">
+        <button type="submit">Eliminar</button>
 
     </form>
     
